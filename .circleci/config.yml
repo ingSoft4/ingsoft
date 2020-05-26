@@ -68,7 +68,7 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
       - run:
           name: Setup Heroku
-            command: |  
+          command: |  
             ssh-keyscan -H heroku.com >> ~/.ssh/known_hosts
             cat > ~/.netrc << EOF
             machine api.heroku.com
