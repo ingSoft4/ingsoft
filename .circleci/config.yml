@@ -69,16 +69,9 @@ jobs:
       - checkout
       - run:
           command: |
-            ssh-keyscan -H heroku.com >> ~/.ssh/known_hosts
-            cat > ~/.netrc << EOF
             machine api.heroku.com
-              login ggiliberti@est.frba.utn.edu.ar
-              password _borreli129_
-            EOF
-            cat >> ~/.ssh/config << EOF
-            VerifyHostKeyDNS yes
-            StrictHostKeyChecking no
-            EOF
+            login ggiliberti@est.frba.utn.edu.ar
+            password _borreli129_
             heroku git:remote -a ing-soft
             heroku restart
 
