@@ -69,8 +69,8 @@ jobs:
       - checkout
       - run:
           command: |
-            heroku login ggiliberti@est.frba.utn.edu.ar EOF
-            password _borreli129_ EOF
+            heroku login "ggiliberti@est.frba.utn.edu.ar" EOF
+            password "_borreli129_" EOF
             heroku git:remote -a ing-soft
             heroku restart
 
