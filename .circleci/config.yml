@@ -57,12 +57,11 @@ jobs:
 
       # run test!
       - run: gradle test
+jobs:
   deploy:
     machine:
       enabled: true
     working_directory: ~/circleci-demo-workflows
-    environment:
-      HEROKU_APP: rocky-river-24105
     steps:
       - run: gradle deploy
 workflows:
