@@ -64,8 +64,6 @@ jobs:
     environment:
       HEROKU_APP: rocky-river-24105
     steps:
-      - restore_cache:
-          key: v1-dependencies-{{ checksum "build.gradle" }}
       - run: gradle deploy
 workflows:
   version: 2 
