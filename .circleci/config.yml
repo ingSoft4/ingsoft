@@ -68,8 +68,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Setup Heroku
-          command: |  
+          command: |
             ssh-keyscan -H heroku.com >> ~/.ssh/known_hosts
             cat > ~/.netrc << EOF
             machine api.heroku.com
@@ -80,8 +79,6 @@ jobs:
             VerifyHostKeyDNS yes
             StrictHostKeyChecking no
             EOF
-      - run:
-          command: |
             heroku git:remote -a ing-soft
             heroku restart
 
