@@ -64,7 +64,7 @@ jobs:
     environment:
       HEROKU_APP: rocky-river-24105
     steps:
-      - run: export TERM=${TERM:-dumb} && gradle deploy
+      - run: export TERM=${TERM:-dumb} && gradle clean build && gradle deploy
 workflows:
   version: 2 
   build_and_test: 
