@@ -67,7 +67,8 @@ jobs:
       enabled: true
     working_directory: ~/repo
     steps:
-      - run:  ssh-keyscan -H heroku.com >> ~/.ssh/known_hosts
+      - run: |
+        ssh-keyscan -H heroku.com >> ~/.ssh/known_hosts
         cat > ~/.netrc << EOF
         machine api.heroku.com
           login ggiliberti@est.frba.utn.edu.ar
