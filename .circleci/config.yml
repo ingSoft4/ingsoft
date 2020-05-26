@@ -66,8 +66,6 @@ jobs:
     machine:
       enabled: true
     working_directory: ~/repo
-    environment:
-      HEROKU_APP: rocky-river-24105
     steps:
       - run: export TERM=${TERM:-dumb} && gradle deploy
 workflows:
