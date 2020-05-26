@@ -69,7 +69,7 @@ jobs:
       - checkout
       - run:
           command: |
-            git push heroku master
+            heroku git:remote -a ing-soft
             heroku restart
 
 workflows:
