@@ -13,7 +13,7 @@ pipeline {
         sh '''sh ./gradlew sonarqube \\
   -Dsonar.projectKey=ingSoft \\
   -Dsonar.host.url=http://localhost:9000 \\
-  -Dsonar.login=cbdb6700d95f22dd8a62dc9316016d6e656ec5e6'''
+  -Dsonar.login=3aaa41ff57af3b850e403c9cf6d0f32861280a34'''
       }
     }
 
