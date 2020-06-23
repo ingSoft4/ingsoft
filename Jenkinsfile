@@ -19,7 +19,7 @@ pipeline {
 
     stage('Tests') {
       steps {
-        sh 'gradle -i test jacocoTestReport '
+        sh 'sh ./gradlew -i test jacocoTestReport '
       }
     }
 
